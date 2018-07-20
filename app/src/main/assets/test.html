@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function getSomeThing(){
+            var str=window.jscalljava.getMessage();
+            alert(str);
+        }
+
+        function exchangeSomeThing(){
+            var str=window.jscalljava.exchangeMessage("来自js");
+            alert(str);
+        }
+
+        function toastClick(){
+            window.jscalljava.toastSomething("这句话来自js");
+            toastClick1();
+            toastClick2();
+        }
+
+        function toastClick1(){
+            window.jscalljava.toastSomething("这句话来自js1");
+        }
+
+        function toastClick2(){
+            window.jscalljava.toastSomething("这句话来自js2");
+        }
+
+        function readyToGo(){
+            alert("Hello")
+        }
+
+        function alertMessage(message){
+            alert(message)
+        }
+
+        function getYourCar(message){
+            return message + "Car";
+        }
+
+        </script>
+    </head>
+
+    <body>
+        <button onclick="getSomeThing()">调用无参有返回值java方法</button>
+        <button onclick="exchangeSomeThing()">调用有参有返回值的java方法</button>
+        <br/>
+        <br/>
+        <button onclick="toastClick()">调用有参无返回值的java方法</button>
+    </body>
+</html>
