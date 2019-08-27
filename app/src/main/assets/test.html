@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-        function getSomeThing(){
-            var str=window.jscalljava.getMessage();
-            alert(str);
-        }
+        <title>js调用android原生代码</title>
+        <script type="text/javascript">
 
-        function exchangeSomeThing(){
-            var str=window.jscalljava.exchangeMessage("来自js");
-            alert(str);
-        }
+            function getSomeThing(){
+                var str=window.jscalljava.getMessage();
+                alert(str);
+            }
 
-        function toastClick(){
-            window.jscalljava.toastSomething("这句话来自js");
-            toastClick1();
-            toastClick2();
-        }
+            function exchangeSomeThing(){
+                var str=window.jscalljava.exchangeMessage("来自js");
+                alert(str);
+            }
 
-        function toastClick1(){
-            window.jscalljava.toastSomething("这句话来自js1");
-        }
+            function toastClick(){
+                window.jscalljava.toastSomething("这句话来自js");
+                toastClick1();
+                toastClick2();
+            }
 
-        function toastClick2(){
-            window.jscalljava.toastSomething("这句话来自js2");
-        }
+            function toastClick1(){
+                window.jscalljava.toastSomething("这句话来自js1");
+            }
 
-        function readyToGo(){
-            alert("Hello")
-        }
+            function toastClick2(){
+                window.jscalljava.toastSomething("这句话来自js2");
+            }
 
-        function alertMessage(message){
-            alert(message)
-        }
+<!---------------------------javaCallJs------------------------------------->
+            function javaCallJS(){
+                alert("calledByJava")
+            }
 
-        function getYourCar(message){
-            return message + "Car";
-        }
+            function javaCallJSWithArgs(message){
+                alert(message)
+            }
+
+            function getYourCar(message){
+                return message + "Car";
+            }
 
         </script>
     </head>
